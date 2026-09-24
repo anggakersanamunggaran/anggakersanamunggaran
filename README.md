@@ -41,8 +41,8 @@ Seven years is also long enough to be humbled by yourself, and nobody warns you 
 I am not the smartest person in most rooms I walk into. I am the one who stays. If you want to see what that produced, the next two sections are the receipt.
 
 **A few ways in:**
-- 📖 [What I have shipped](#what-i-have-shipped) if you want the stories rather than the list.
-- 👨💻 [Public code](#public-code) if you would rather read code than prose.
+- 📖 [What I have shipped](#-what-i-have-shipped) if you want the stories rather than the list.
+- 👨💻 [Public code](#-public-code) if you would rather read code than prose.
 - 📮 [anggakersana@gmail.com](mailto:anggakersana@gmail.com) if you want to talk about a role. I answer.
 
 ## 🔧 What I work with
@@ -134,7 +134,7 @@ Nothing in that list arrived fully formed. It is the standard origin story, the 
 
 </div>
 
-Everything above was the packaging. This part drops the act: checkable, not rounded up, and every figure traces back to git history or a ticket.
+🎤 Everything above was the packaging. This part drops the act: checkable, not rounded up, and every figure traces back to git history or a ticket.
 
 ---
 
