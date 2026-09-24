@@ -89,11 +89,33 @@ Checkable, not rounded up. Every figure traces back to git history or a ticket.
 
 ## Public code
 
-- **[ShopeeMonitor](https://github.com/anggakersanamunggaran/ShopeeMonitor)** · real-time seller analytics for Shopee: NestJS API and a React dashboard, syncing through the Shopee Open Platform API v2.
-- **[laravel-solid-starter](https://github.com/anggakersanamunggaran/laravel-solid-starter)** · a Laravel 12 REST API starting point: slim controllers, a service layer, repository pattern with contracts, typed DTOs, action classes.
-- **[Blog-Api](https://github.com/anggakersanamunggaran/Blog-Api)** · architecture study: clean code, onion architecture, dependency injection, Redis Streams.
-- **[nest-js-starter-kit](https://github.com/anggakersanamunggaran/nest-js-starter-kit)** · the NestJS setup I reach for.
-- **[backend-assessment-python](https://github.com/anggakersanamunggaran/backend-assessment-python)** · a Python backend exercise.
+Five repositories that show how I build, rather than everything I have ever pushed. Each one runs with Docker, and the two that carry real invariants have tests.
+
+**[laravel-solid-starter](https://github.com/anggakersanamunggaran/laravel-solid-starter)**
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white)
+The layering I reach for in a new backend: slim controllers, a real service layer, repositories behind contracts, typed DTOs, and one action class per mutation. A starter without Docker and tests is just a folder.
+
+**[nest-js-starter-kit](https://github.com/anggakersanamunggaran/nest-js-starter-kit)**
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+The same architecture in a second stack, on purpose: identical read and write separation, idiomatic NestJS. Worth a look if you want to know the philosophy is not just a Laravel habit.
+
+**[ShopeeMonitor](https://github.com/anggakersanamunggaran/ShopeeMonitor)**
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+A product rather than a demo: a NestJS API and a React dashboard that sync seller orders and escrow data through the Shopee Open Platform API v2, then work out net profit per SKU. TypeORM, Redis, BullMQ for the sync jobs, and rate limiting so the upstream API stays happy.
+
+**[ottodot-takehome](https://github.com/anggakersanamunggaran/ottodot-takehome)**
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+The smallest working slice of a booking system that has to stay correct under concurrency and payment failure, which is usually the part an exercise like this skips. Schema, invariants and tests included.
+
+**[backend-assessment-python](https://github.com/anggakersanamunggaran/backend-assessment-python)**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+A customer data pipeline: a Flask mock source, a FastAPI ingest service using dlt, PostgreSQL, and a REST API in front of it, all containerised and laid out in Onion Architecture.
 
 ---
 
