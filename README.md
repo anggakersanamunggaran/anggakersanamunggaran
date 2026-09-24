@@ -26,6 +26,18 @@ The job title sounds grander than the actual work. Most of my days are writing t
 
 The part people seem to remember about working with me is that I am good company in a long week. I will take that over most compliments.
 
+---
+
+## Who I am, in case the name means nothing yet
+
+It probably does. I have never worked somewhere you would recognise from the logo. My entire career is one employer, seven years, and a product most people will never see from the inside.
+
+What I have instead is time in the chair. I joined in May 2019 as a web developer and was committing to production within weeks, which sounded like confidence at the time and sounds like a code review that moved too fast in hindsight. By 2021 I was shipping across a product family instead of a single platform. By 2025 I was leading the rebuild of the flagship product and writing the specifications that drove it.
+
+Seven years on one product does something specific to a person. You watch your own code become legacy. You watch a feature you argued for get deleted by someone who never met you. You find out which of your decisions aged well, and you do not get to argue with the answer.
+
+I am not the smartest person in most rooms I walk into. I am the one who stays. If you want to see what that produced, the next two sections are the receipt.
+
 **A few ways in:**
 - [What I have shipped](#what-i-have-shipped) if you want the stories rather than the list.
 - [Public code](#public-code) if you would rather read code than prose.
