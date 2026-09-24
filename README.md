@@ -18,9 +18,11 @@ Seven years building hiring software at ASTRNT, from the product spec through to
 
 I am Angga, a backend-leaning full-stack engineer based in Indonesia. Seven years of my career went into one product family: hiring software at ASTRNT, built for enterprise clients who hire in serious volume.
 
-The job title sounds grander than the actual work. Most of what I do is write the specification, build the thing, and then stick around for the call when it breaks in production, which is where I have learned nearly everything I know. I am the person who asks what happens if the connection drops halfway through, because it always does eventually.
+Engineering has three moods, and I have had all of them this month: it works on my machine, it works in production and nobody knows why, and it stopped working and nobody touched it. The third one is where I have learned nearly everything I know. I am also the person who asks what happens if the connection drops halfway through, because it always does eventually.
 
-The part people seem to remember about working with me is that I am good company in a long week. I will take that over most compliments. I like a well-named variable, a query that got faster, and the small silence in a room when something that used to crawl suddenly does not.
+The job title sounds grander than the actual work. Most of my days are writing the specification, building the thing, and then sticking around for the call when it breaks in production.
+
+The part people seem to remember about working with me is that I am good company in a long week. I will take that over most compliments.
 
 **A few ways in:**
 - [What I have shipped](#what-i-have-shipped) if you want the stories rather than the list.
@@ -61,22 +63,32 @@ The part people seem to remember about working with me is that I am good company
 
 ## What I have shipped
 
-Seven years on one product family: HR technology for enterprise clients, sold as B2B SaaS. Every story below starts the same way, with someone describing a problem we had no infrastructure for yet. The underdog arc, except the training montage is a changelog.
+Seven years on one product family: HR technology for enterprise clients, sold as B2B SaaS. Every story below starts with a sentence nobody wants to hear in a planning meeting, usually "can we just" followed by a request that is secretly three requests. Five of them, each with a setup and a punchline, because that is honestly the shape they have.
 
 **Act one. The scheduling problem.**
-Hiring at volume used to cost interviewer hours, one calendar slot at a time. We built asynchronous video interviews with automatic scoring and a transcript summary, so a candidate answers on their own clock and screening capacity stops depending on how many interviewers happen to be free that week.
+Hiring at volume used to run on interviewer calendars. A recruiter opens the calendar, sees forty free slots, books forty interviews, and congratulations, you have just employed a human being as a scheduling algorithm.
+
+So we built asynchronous video interviews with automatic scoring and a transcript summary. The candidate answers on their own clock, and screening capacity stops depending on how many interviewers remembered to block their lunch hour.
 
 **Act two. The candidate who lost their answer.**
-A dropped connection in the middle of a recording used to cost a candidate their entire attempt. So the answer upload became a chunked path with server-side reconstruction: the pieces land as they are sent, and the server rebuilds the file. The proctoring audio stream, the part with no package behind it, is the one I wrote myself. A bad connection now costs seconds, not an interview.
+You know this one. The progress bar reaches ninety-nine percent, the spinner starts reconsidering its life choices, and then the browser decides it has done enough for today. In most apps that is a mild inconvenience. In an interview it costs a candidate the entire attempt, and there is no version of that conversation where the candidate is at fault.
+
+So the upload became a chunked path with server-side reconstruction. The pieces land as they are sent, the server rebuilds the file, and a bad connection now costs seconds instead of an interview. The progress bar still lies to you, it just lies faster. The proctoring audio stream, the part with no package behind it, is the one I wrote myself.
 
 **Act three. The recording nobody could score.**
-A silent or frozen recording used to reach a reviewer looking like a completed answer, which quietly fails a good candidate for the crime of owning a bad microphone. We put a quality gate in front of it using ffmpeg silence and freeze detection, with a retake flow a human approves. The system flags, a person decides.
+The mute button is the most powerful button in human history. A silent or frozen recording used to arrive at a reviewer looking exactly like a completed answer, which means the platform quietly fails a good candidate for the crime of owning a cheap headset.
+
+So we put a quality gate in front of it, using ffmpeg silence and freeze detection. The system flags, a human decides, and the retake flow exists because a machine should never get the last word on whether a person gets a job.
 
 **Act four. The day 2,500 candidates arrived at once.**
-Peak season, 2,500 concurrent candidates, and the platform started to crawl. The cause was not exotic: N+1 queries, missing indexes, and row-lock contention under load. We rewrote the hot queries, audited the indexes and the locks, and moved the heavy work behind queues. This is still the part of the job I like most, because the feedback is completely unambiguous.
+It worked on my machine. It worked on your machine. It worked on the staging server that has seen things. Then peak season arrived, 2,500 concurrent candidates, and the platform started to crawl in a way that felt deliberate.
+
+The cause was not exotic: N+1 queries, missing indexes, row-lock contention. One innocent query quietly turning into two thousand five hundred queries is the database equivalent of one person asking a question and the whole room answering at once. We rewrote the hot queries, audited the indexes and the locks, and moved the heavy work behind queues. Still my favourite kind of day, because the feedback is completely unambiguous.
 
 **Act five. The gate that protects the contract.**
-Concurrency is what infrastructure costs, and it is what an enterprise client agreement actually pays for. So the assessment platform admits candidates against a configured in-flight limit per platform. Past that limit, a candidate waits for a slot instead of walking into a platform that cannot serve them. Fairness comes from everyone queueing the same way, and the limit is configuration, not a number I get to invent.
+Concurrency is what infrastructure costs, and it is what an enterprise client agreement actually pays for. Let everyone in at once and the invoice and the experience both fall over.
+
+So we built the thing everybody hates and everybody needs: a queue. Past the configured in-flight limit, a candidate waits for a slot instead of walking into a platform that cannot serve them. The difference between our queue and the one at the bank is that ours tells you why you are waiting. Fairness comes from everyone queueing the same way, and the limit is configuration, not a number I get to invent.
 
 Nothing in that list arrived fully formed. It is the standard origin story, the one every shonen arc is built on, except the power-ups are migrations and the training montage is a changelog.
 
@@ -94,7 +106,7 @@ Nothing in that list arrived fully formed. It is the standard origin story, the 
 
 </div>
 
-Checkable, not rounded up. Every figure traces back to git history or a ticket.
+Everything above was the packaging. This part drops the act: checkable, not rounded up, and every figure traces back to git history or a ticket.
 
 ---
 
