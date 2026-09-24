@@ -28,7 +28,7 @@ The part people seem to remember about working with me is that I am good company
 
 ---
 
-## Who I am, in case the name means nothing yet
+## 🙋 Who I am, in case the name means nothing yet
 
 It probably does. I have never worked somewhere you would recognise from the logo. My entire career is one employer, seven years, and a product most people will never see from the inside.
 
@@ -41,11 +41,11 @@ Seven years is also long enough to be humbled by yourself, and nobody warns you 
 I am not the smartest person in most rooms I walk into. I am the one who stays. If you want to see what that produced, the next two sections are the receipt.
 
 **A few ways in:**
-- [What I have shipped](#what-i-have-shipped) if you want the stories rather than the list.
-- [Public code](#public-code) if you would rather read code than prose.
-- [anggakersana@gmail.com](mailto:anggakersana@gmail.com) if you want to talk about a role. I answer.
+- 📖 [What I have shipped](#what-i-have-shipped) if you want the stories rather than the list.
+- 👨💻 [Public code](#public-code) if you would rather read code than prose.
+- 📮 [anggakersana@gmail.com](mailto:anggakersana@gmail.com) if you want to talk about a role. I answer.
 
-## What I work with
+## 🔧 What I work with
 
 **Backend**
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
@@ -77,18 +77,18 @@ I am not the smartest person in most rooms I walk into. I am the one who stays. 
 
 ---
 
-## What I have shipped
+## 🚢 What I have shipped
 
 Seven years on one product family: HR technology for enterprise clients, sold as B2B SaaS. Every story below starts with a sentence nobody wants to hear in a planning meeting, usually "can we just" followed by a request that is secretly three requests. Five of them, each with a setup and a punchline, because that is honestly the shape they have.
 
-**Act one. The scheduling problem.**
+**📅 Act one. The scheduling problem.**
 Hiring at volume used to run on interviewer calendars. Forty open slots, forty interviews, one recruiter who now has a second job as a scheduling algorithm.
 
 Here is the uncomfortable part. The interviewer you got was not the best one. It was the one with nothing better to do.
 
 So we built asynchronous video interviews with automatic scoring and a transcript summary. The candidate answers on their own clock, and screening stops depending on whose Tuesday was free.
 
-**Act two. The candidate who lost their answer.**
+**⏳ Act two. The candidate who lost their answer.**
 You know this one. The progress bar reaches ninety-nine percent, the spinner stops spinning and just sits there thinking, and then the browser closes the connection because it has decided you are done.
 
 The progress bar is the only UI element in history that has lied to your face and kept its job.
@@ -97,21 +97,21 @@ On a normal app that is a mild inconvenience. In an interview it costs a candida
 
 So the upload became a chunked path with server-side reconstruction. The pieces land as they are sent, the server rebuilds the file, and a bad connection now costs seconds instead of an interview. The progress bar still lies to you, it just lies faster. The proctoring audio stream, the part with no package behind it, is the one I wrote myself.
 
-**Act three. The recording nobody could score.**
+**🔇 Act three. The recording nobody could score.**
 The mute button is the most powerful button in the world. It has ended more careers than any performance review.
 
 A silent recording looks exactly like a completed answer. The reviewer sees a finished interview, not a dead microphone, and a good candidate fails for the crime of owning a cheap headset.
 
 So we put a quality gate in front of it, using ffmpeg silence and freeze detection. The system flags. A human decides. A machine should not get the last word on whether somebody gets a job.
 
-**Act four. The day 2,500 candidates arrived at once.**
+**🔥 Act four. The day 2,500 candidates arrived at once.**
 It worked on my machine. It worked on your machine. It worked on the staging server that has seen things. Then peak season arrived, 2,500 concurrent candidates, and the platform went to lunch.
 
 The cause was not exotic. One innocent query, multiplied by two thousand five hundred, stops being a query and becomes a group chat. Add missing indexes and row-lock contention, and the database is now the slowest person in the conversation.
 
 We rewrote the hot queries, audited the indexes and the locks, and moved the heavy work behind queues. The fix was smaller than the diagnosis, which is usually how it goes.
 
-**Act five. The gate that protects the contract.**
+**🚦 Act five. The gate that protects the contract.**
 Concurrency is what infrastructure costs, and it is what an enterprise client agreement actually pays for. Let everyone in at once and the invoice and the experience fall over together.
 
 So we built the one thing every user hates and every system needs: a queue. Past the configured in-flight limit, a candidate waits for a slot instead of walking into a platform that cannot serve them, and the limit is configuration, not a number I get to invent.
@@ -122,7 +122,7 @@ Nothing in that list arrived fully formed. It is the standard origin story, the 
 
 ---
 
-## By the numbers
+## 📊 By the numbers
 
 <div align="center">
 
@@ -138,7 +138,7 @@ Everything above was the packaging. This part drops the act: checkable, not roun
 
 ---
 
-## Public code
+## 📦 Public code
 
 Five repositories that show how I build, rather than everything I have ever pushed. Each one runs with Docker, and the two that carry real invariants have tests. I have been the person on the 2am call, and I would like to keep that job boring.
 
@@ -170,7 +170,7 @@ A customer data pipeline: a Flask mock source, a FastAPI ingest service using dl
 
 ---
 
-## Currently
+## 🌱 Currently
 
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 
