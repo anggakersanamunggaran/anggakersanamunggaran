@@ -14,7 +14,18 @@ Seven years building hiring software at ASTRNT, from the product spec through to
 
 ---
 
-I write the specification, build the thing, and keep it running. Most of my depth sits in backend services and the unglamorous parts around them: asynchronous processing, data modelling, and making a platform survive its own peak season.
+**Hi, you are on my GitHub. Since you already made it this far, let me introduce myself properly.**
+
+I am Angga, a backend-leaning full-stack engineer based in Indonesia. Seven years of my career went into one product family: hiring software at ASTRNT, built for enterprise clients who hire in serious volume.
+
+The job title sounds grander than the actual work. Most of what I do is write the specification, build the thing, and then stick around for the call when it breaks in production, which is where I have learned nearly everything I know. I am the person who asks what happens if the connection drops halfway through, because it always does eventually.
+
+The part people seem to remember about working with me is that I am good company in a long week. I will take that over most compliments. I like a well-named variable, a query that got faster, and the small silence in a room when something that used to crawl suddenly does not.
+
+**A few ways in:**
+- [What I have shipped](#what-i-have-shipped) if you want the stories rather than the list.
+- [Public code](#public-code) if you would rather read code than prose.
+- [anggakersana@gmail.com](mailto:anggakersana@gmail.com) if you want to talk about a role. I answer.
 
 ## What I work with
 
