@@ -14,13 +14,15 @@ Seven years building hiring software at ASTRNT, from the product spec through to
 
 ---
 
-**Hi, you are on my GitHub. Since you already made it this far, let me introduce myself properly.**
+**Hi. You are on my GitHub, which usually means one of three things: you are hiring, you are a developer who followed my name here from somewhere, or you are me at 2am checking whether the push actually went through. All three of you are welcome.**
 
 I am Angga, a backend-leaning full-stack engineer based in Indonesia. Seven years of my career went into one product family: hiring software at ASTRNT, built for enterprise clients who hire in serious volume.
 
+People ask what a backend engineer actually does all day. The honest answer is the two hard problems in computer science: cache invalidation and naming things. And off-by-one errors.
+
 Engineering has three moods, and I have had all of them this month: it works on my machine, it works in production and nobody knows why, and it stopped working and nobody touched it. The third one is where I have learned nearly everything I know. I am also the person who asks what happens if the connection drops halfway through, because it always does eventually.
 
-The job title sounds grander than the actual work. Most of my days are writing the specification, building the thing, and then sticking around for the call when it breaks in production.
+The job title sounds grander than the actual work. Most of my days are writing the specification, building the thing, and then staying around for the call when it breaks in production. Shipping to production has a lot in common with UDP: you do find out whether it arrived, just never at a convenient time.
 
 The part people seem to remember about working with me is that I am good company in a long week. I will take that over most compliments.
 
